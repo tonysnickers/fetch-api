@@ -13,7 +13,7 @@ export const CardMovie = ({ movie }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="250"
           image={image}
           alt="green iguana"
         />
