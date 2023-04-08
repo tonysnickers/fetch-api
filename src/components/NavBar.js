@@ -3,18 +3,12 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import IconButton from '@mui/material/IconButton'
-
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
-import { useGetMovie } from '../fetchApi/FectchApi'
 
-const NavBar = (props) => {
-  const [query, setQuery] = React.useState('')
-
-  const { data } = useGetMovie(query)
-
+const NavBar = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -34,9 +28,16 @@ const NavBar = (props) => {
           >
             MUI
           </Typography>
-          <SearchBar setQuery={setQuery}/>
+          <SearchBar />
           <Box>
-            <Link to={'/'} style={{ textDecoration: 'none', color: '#fff', marginRight: '10px' }}>
+            <Link
+              to={'/'}
+              style={{
+                textDecoration: 'none',
+                color: '#fff',
+                marginRight: '10px',
+              }}
+            >
               home
             </Link>
             <Link

@@ -1,9 +1,10 @@
 import {Container, Grid } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
 import { CardMovie } from '../components/Card'
+import { MovieContext } from '../App'
 
 const Home = () => {
-
+  const data = useContext(MovieContext)
   return (
     <>
       <Container sx={{ marginTop: '60px' }}>

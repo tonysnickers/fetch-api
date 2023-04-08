@@ -9,7 +9,7 @@ export const useGetMovie = (query) => {
           `https://api.themoviedb.org/3/search/multi?api_key=e601f7811cab9a1cab3eb8660bbfc24d&language=en-US&query=${query}&page=1&include_adult=false`,
         )
       : await axios.get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`,
+          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=2`,
         )
   })
   return {
